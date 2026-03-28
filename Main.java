@@ -1,11 +1,13 @@
 public class Main {
     public static void main(String[] args) {
-        String str = "Online Learning Platform";
+        String str = "Welcome";
 
-        if (str.contains("Offline")) {
-            System.out.println("The string contains 'Offline'.");
+        int index = str.indexOf('e');
+
+        if (index != -1) {
+            System.out.println("Index of 'e' is: " + index);
         } else {
-            System.out.println("The string does not contain 'Offline'.");
+            System.out.println("'e' is not found in the string.");
         }
     }
 }

@@ -1,24 +1,24 @@
 class Student {
     String name;
     int rollNo;
-    double marks;
 
-    // Method to display student details
+    // Constructor
+    Student(String n, int r) {
+        name = n;
+        rollNo = r;
+    }
+
     void display() {
         System.out.println("Name: " + name);
         System.out.println("Roll No: " + rollNo);
-        System.out.println("Marks: " + marks);
     }
 
     public static void main(String[] args) {
-        Student s1 = new Student();
+        // Constructor is called here
+        Student s1 = new Student("Palak", 101);
+        Student s2 = new Student("Kunal", 102);
 
-        // Assign values
-        s1.name = "Palak";
-        s1.rollNo = 101;
-        s1.marks = 85.5;
-
-        // Display details
         s1.display();
+        s2.display();
     }
 }

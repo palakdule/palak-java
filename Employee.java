@@ -1,42 +1,29 @@
-import java.util.Scanner;
-
 class Employee {
-    int empno;
-    String ename;
-    float basic, hra, da, netpay;
+    
+    int empId;
+    String name;
+    double salary;
 
-    float Calculate() {
-        return basic + hra + da;
+    void setDetails(int id, String n, double s) {
+        empId = id;
+        name = n;
+        salary = s;
     }
 
-    void havedata() {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter Emp No: ");
-        empno = sc.nextInt();
-        System.out.print("Enter Name: ");
-        ename = sc.next();
-        System.out.print("Enter Basic: ");
-        basic = sc.nextFloat();
-        System.out.print("Enter HRA: ");
-        hra = sc.nextFloat();
-        System.out.print("Enter DA: ");
-        da = sc.nextFloat();
-
-        netpay = Calculate();
+    void displayDetails() {
+        System.out.println("Employee ID: " + empId);
+        System.out.println("Name: " + name);
+        System.out.println("Salary: " + salary);
     }
 
-    void dispdata() {
-        System.out.println("Emp No: " + empno);
-        System.out.println("Name: " + ename);
-        System.out.println("Basic: " + basic);
-        System.out.println("HRA: " + hra);
-        System.out.println("DA: " + da);
-        System.out.println("Net Pay: " + netpay);
-    }
-
+    
     public static void main(String[] args) {
-        Employee e = new Employee();
-        e.havedata();
-        e.dispdata();
+        Employee emp1 = new Employee();
+
+        
+        emp1.setDetails(101, "Rahul", 50000);
+
+        
+        emp1.displayDetails();
     }
 }

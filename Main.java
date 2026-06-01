@@ -1,13 +1,12 @@
 public class Main {
     public static void main(String[] args) {
-        String str = "Welcome";
+        int[] arr = {1, 2, 3, 4, 5};
+        int sum = 0;
 
-        int index = str.indexOf('e');
-
-        if (index != -1) {
-            System.out.println("Index of 'e' is: " + index);
-        } else {
-            System.out.println("'e' is not found in the string.");
+        for(int i = 0; i < arr.length; i++) {
+            sum += arr[i];
         }
+
+        System.out.println("Sum of array elements: " + sum);
     }
 }
